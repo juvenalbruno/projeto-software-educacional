@@ -6,18 +6,22 @@
         "type": "MULT",
         "answers": [
             {
+                "id": 1,
                 "label": "Frevo",
                 "answerIsCorrect": true
             },
             {
+                "id": 2,
                 "label": "Valsa",
                 "answerIsCorrect": false
             },
             {
+                "id": 3,
                 "label": "Samba",
                 "answerIsCorrect": false
             },
             {
+                "id": 4,
                 "label": "Forró",
                 "answerIsCorrect": false
             }

@@ -1,14 +1,29 @@
 import { Container } from "./styles";
 import { GetActiviitiesDB } from "../utils/getActivitiesDB";
+import { MultQuestions } from "./MultQuestions";
 
 function ModuleQuestions(){
     const activities = GetActiviitiesDB();
 
-    console.log('activities => ', activities )
+    function SelectTypeQuestion(item, index){
+        console.log(item?.title)
+        return (
+            <MultQuestions
+                key={index}
+                questionTitle={item?.title} 
+                questionImg={item?.img}
+                answers={item?.answers}
+            />
+        )
+    };
     
     return(
         <Container>
-            <h3>{}</h3>
+            {activities.map((item, index) => {
+                return (
+                    SelectTypeQuestion(item, index)
+                );
+            })}
         </Container>
     );
 }

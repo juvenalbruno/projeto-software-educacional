@@ -3,7 +3,6 @@ import { BsCheckLg } from "react-icons/bs";
 
 function SelectAnswers({ id, label, answerIsCorrect, selected, setSelected }){
     const answerCorrect = selected !== null ? ((selected === id) && answerIsCorrect) : null;
-    console.log(selected === id)
     return(
         <Container 
             isCorrect={answerCorrect} 

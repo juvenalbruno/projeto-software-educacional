@@ -36,6 +36,7 @@ function Complete({ questionTitle, questionImg, question, answers }){
                             : arrComplete[index] 
                         : ''
                     } 
+                    maxLength={1}
                     onChange={e => Slit(e.target.value.toUpperCase(), index)} 
                     disabled={item === arrCorrect[index]}
                 />

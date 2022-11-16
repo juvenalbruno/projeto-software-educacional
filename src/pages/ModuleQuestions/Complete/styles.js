@@ -5,6 +5,7 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 
     img {
         width: 100%;
@@ -24,6 +25,8 @@ export const Container = styled.div`
     .inputs-complete {
         display: flex;
         gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     input {

@@ -12,13 +12,14 @@ function Home() {
       <Hr />
 
       <div className='cards'>
-        {db_modules.map(({ id, name, img }) => {
+        {db_modules.map(({ id, name, img, blocked }) => {
           return(
             <CardModule
               key={id}
               moduleId={id}
               moduleName={name} 
               moduleImg={img}
+              blocked={blocked}
             />
           )
         })}

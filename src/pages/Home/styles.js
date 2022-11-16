@@ -15,6 +15,10 @@ export const Container = styled.div`
         padding: 5px 0;
         display: flex;
         justify-content: center;
+
+        @media (max-width: 768px) {
+            font-size: 18px;
+        }
     }
 
     .cards {

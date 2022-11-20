@@ -17,3 +17,7 @@ export function saveData({ questionId, answersId, isCorrect = false, word = null
 export function getItensSaved(){
     return JSON.parse(localStorage.getItem(key));    
 }
+
+export function deleteAnswers(){
+    localStorage.removeItem(key);
+}

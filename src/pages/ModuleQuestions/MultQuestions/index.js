@@ -23,8 +23,6 @@ function MultQuestions({ questionId, questionTitle, questionImg, answers }){
             });
     }, [selectedValue]);
 
-
-
     return (
         <Container>
             <h1>{questionTitle}</h1>
@@ -40,6 +38,7 @@ function MultQuestions({ questionId, questionTitle, questionImg, answers }){
                             answerIsCorrect={item.answerIsCorrect} 
                             selected={selectedValue}
                             setSelected={() => setSelectedValue(item.id)}
+                            setDisabled={selectedValue > 0 && selectedValue != null}
                         />
                     );
                 })}

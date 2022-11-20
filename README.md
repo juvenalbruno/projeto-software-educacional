@@ -9,6 +9,5 @@ https://projeto-software-educacional.vercel.app/
 
 ## TO-DO
 
--> SAVE QUESTOES LOCAIS PARA QUANDO PAGINAR, NAO PERDER A RESPOSTA;
--> QUESTOES DE RELACIONAR;
--> COLOCAR NOVO MODULO;
+-> SAVE QUESTOES de texto
+-> COLOCAR NOVO MODULO de matematica;

@@ -1,9 +1,29 @@
 import React from "react";
 import { SelectAnswers } from "../../components/SelectAnswers";
+import { getItensSaved, saveData } from "../../utils/saveLocalStorage";
 import { Container } from "./styles";
 
-function MultQuestions({ questionTitle, questionImg, answers }){
+function MultQuestions({ questionId, questionTitle, questionImg, answers }){
     const [selectedValue, setSelectedValue] = React.useState();
+    const dataStorage = getItensSaved();
+
+    React.useEffect(() => {
+        if(dataStorage){
+            const question = dataStorage?.find(i => i.questionId === questionId);
+            if(question)
+                setSelectedValue(question.answersId);
+        }
+    }, [questionId]);
+
+    React.useEffect(() => {
+        if(selectedValue)
+            saveData({
+                questionId: questionId,
+                answersId: selectedValue
+            });
+    }, [selectedValue]);
+
+
 
     return (
         <Container>

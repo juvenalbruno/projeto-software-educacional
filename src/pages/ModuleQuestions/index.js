@@ -8,17 +8,16 @@ import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 function ModuleQuestions(){
     const activities = GetActiviitiesDB();
     const [pagination, setPagination] = React.useState(0);
-    let saveData = [];
 
     function SelectTypeQuestion(item, index){
         if(item.type.toUpperCase() === 'MULT'){
             return (
                 <MultQuestions
                     key={index}
+                    questionId={item.id}
                     questionTitle={item?.title} 
                     questionImg={item?.img}
                     answers={item?.answers}
-                    saveData={saveData}
                 />
             )
         }
@@ -28,11 +27,11 @@ function ModuleQuestions(){
             return (
                 <Complete 
                     key={index}
+                    questionId={item.id}
                     questionTitle={item?.title} 
                     questionImg={item?.img}
                     answers={item?.answers}
                     question={item?.question}
-                    saveData={saveData}
                 />
             )
         }

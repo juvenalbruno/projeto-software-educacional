@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { CardLink } from "./styles";
 
 function CardModule({ moduleId, moduleImg, moduleName, blocked }){
-  console.log(blocked)
     return(
         <CardLink blocked={!blocked}>
           <Link to={!blocked ? `/module?id=${moduleId}` : ''}>

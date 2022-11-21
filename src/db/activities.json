@@ -38,12 +38,12 @@
             {
                 "id": 1,
                 "label": "Kurupira",
-                "answerIsCorrect": true
+                "answerIsCorrect": false
             },
             {
                 "id": 2,
                 "label": "Curupira",
-                "answerIsCorrect": false
+                "answerIsCorrect": true
             },
             {
                 "id": 3,

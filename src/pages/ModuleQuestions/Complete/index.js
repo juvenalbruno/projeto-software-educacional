@@ -1,11 +1,14 @@
 import React from 'react';
-import { Container } from './styles';
+import { getItensSaved, saveData } from '../../utils/saveLocalStorage';
+import { Container, Input } from './styles';
 
-function Complete({ questionTitle, questionImg, question, answers }){
+function Complete({ questionId, questionTitle, questionImg, question, answers }){
     const arr = question.toUpperCase().split('');
     const arrCorrect = answers.toUpperCase().split('');
     const[arrComplete, setArrComplete] = React.useState(arr);
     const[arrTemp, setArrTemp] = React.useState(null);
+
+    const dataStorage = getItensSaved();
 
     function Slit(value, index){
         let arry = arrComplete;
@@ -20,14 +23,30 @@ function Complete({ questionTitle, questionImg, question, answers }){
         }
     }, [arrTemp]);
 
+
+    React.useEffect(() => {
+        if(dataStorage){
+            const question = dataStorage?.find(i => i.questionId === questionId);
+            if(question)
+            setArrComplete(question.word);
+        }
+    }, [questionId]);
+
+    React.useEffect(() => {
+        if(arrTemp)
+            saveData({
+                questionId: questionId,
+                word: arrTemp
+            });
+    }, [arrTemp]);
+
     return (
         <Container>
         <h1>{questionTitle}</h1>
         <img src={questionImg} alt={questionTitle} />
-
         <div className="inputs-complete">
             {arrComplete.map((item, index) => 
-                <input
+                <Input
                     key={index}
                     type="text" 
                     value={item !== '*' 
@@ -39,11 +58,17 @@ function Complete({ questionTitle, questionImg, question, answers }){
                     maxLength={1}
                     onChange={e => Slit(e.target.value.toUpperCase(), index)} 
                     disabled={item === arrCorrect[index]}
+                    isCorrectComplete={(arrComplete[index] === '*')
+                        ? '1px solid #000' 
+                        : arrCorrect[index] !== arrComplete[index]
+                            ? '3px solid #ff0000'
+                            : '1px solid #000'
+                    }
                 />
             )}
         </div>
 
-    </Container>
+        </Container>
     );
 }
 

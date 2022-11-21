@@ -29,12 +29,14 @@ export const Container = styled.div`
         justify-content: center;
     }
 
-    input {
-        width: 35px;
-        height: 40px;
-        text-align: center;
-        font-size: 28px;
-    }
-
     
+    
+    `;
+
+export const Input = styled.input `
+    width: 35px;
+    height: 40px;
+    text-align: center;
+    font-size: 28px;
+    border: ${({ isCorrectComplete }) => isCorrectComplete };
 `;

@@ -1,6 +1,6 @@
 const key = 'OBJ_SAVED';
 
-export function saveData({ questionId, answersId, isCorrect = false, word = null }){
+export function saveData({ questionId, answersId, isCorrect = false, word = [] }){
     let savedObject = JSON.parse(localStorage.getItem(key)) || [];
 
     let obj = { 

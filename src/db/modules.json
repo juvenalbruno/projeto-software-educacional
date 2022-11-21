@@ -9,8 +9,8 @@
     {
         "id": 2,
         "unit": 2,
-        "name": "Gênero e lugar da mulher na sociedade brasileira",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWjmFAncceI2YxUKT8HeTTVW226wleZ_yzRM98-iDBVgdq4x7BlfOaFU0NU6WHdiC01vI&usqp=CAU",
-        "blocked": true
+        "name": "Matemática básica",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVB8x3uC6ZDLf4L4Huyq9tvFJxcAdHJI3P_Q&usqp=CAU",
+        "blocked": false
     }
 ]

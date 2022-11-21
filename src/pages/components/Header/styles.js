@@ -21,7 +21,7 @@ export const Container = styled.div `
         gap: 10px;
         color: black;
         text-decoration: none;
-        left: 20px;
+        left: 60px;
         position: relative;
 
         :hover {

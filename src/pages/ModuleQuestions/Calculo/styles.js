@@ -27,14 +27,24 @@ export const Container = styled.div`
         gap: 15px;
         flex-wrap: wrap;
         justify-content: center;
+        padding: 0px 8%;
     }
 
-    
+    h2 {
+        width: 25rem;
+        font-size: 20px;
+        margin-bottom: 45px;
+        background: #fff;
+        padding: 15px;
+        line-height: 1.8;
+        font-weight: 300;
+    }
     
     `;
 
 export const Input = styled.input `
-    width: 35px;
+    min-width: 35px;
+    max-width: 85px;
     height: 40px;
     text-align: center;
     font-size: 28px;

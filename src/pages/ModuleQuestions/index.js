@@ -4,35 +4,47 @@ import { GetActiviitiesDB } from "../utils/getActivitiesDB";
 import { MultQuestions } from "./MultQuestions";
 import { Complete } from "./Complete";
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
+import { Calc } from './Calculo';
 
 function ModuleQuestions(){
     const activities = GetActiviitiesDB();
     const [pagination, setPagination] = React.useState(0);
-    let saveData = [];
 
     function SelectTypeQuestion(item, index){
         if(item.type.toUpperCase() === 'MULT'){
             return (
                 <MultQuestions
                     key={index}
+                    questionId={item.id}
                     questionTitle={item?.title} 
                     questionImg={item?.img}
                     answers={item?.answers}
-                    saveData={saveData}
                 />
             )
         }
-
 
         else if(item.type.toUpperCase() === 'COMPLETE'){
             return (
                 <Complete 
                     key={index}
+                    questionId={item.id}
                     questionTitle={item?.title} 
                     questionImg={item?.img}
                     answers={item?.answers}
                     question={item?.question}
-                    saveData={saveData}
+                />
+            )
+        }
+        
+        else if(item.type.toUpperCase() === 'CALC'){
+            return (
+                <Calc 
+                    key={index}
+                    questionId={item.id}
+                    questionTitle={item?.title} 
+                    questionText={item?.text}
+                    answers={item?.answers}
+                    question={item?.question}
                 />
             )
         }

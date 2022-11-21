@@ -15,7 +15,6 @@ export const Container = styled.div `
 
     display: flex;
     gap: 15px;
-    cursor: pointer;
 
     input {
         display: none;
@@ -39,6 +38,6 @@ export const Container = styled.div `
         font-weight: 600;
         font-size: 20px;
         color: ${({ selected }) => selected ? "#fff" : "#6e6d6d"};
-        cursor: pointer;
+        cursor: ${( disabled ) => disabled};
     }
 `;

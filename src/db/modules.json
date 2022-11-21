@@ -1,16 +1,14 @@
 [
     {
         "id": 1,
-        "unit": 1,
         "name": "Diversidade Cultural",
         "img": "https://i.pinimg.com/564x/28/1f/31/281f31e9c0fd4b5d5338cb9c661b2fb2.jpg",
         "blocked": false
     },
     {
         "id": 2,
-        "unit": 2,
-        "name": "Gênero e lugar da mulher na sociedade brasileira",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWjmFAncceI2YxUKT8HeTTVW226wleZ_yzRM98-iDBVgdq4x7BlfOaFU0NU6WHdiC01vI&usqp=CAU",
-        "blocked": true
+        "name": "Matemática básica",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVB8x3uC6ZDLf4L4Huyq9tvFJxcAdHJI3P_Q&usqp=CAU",
+        "blocked": false
     }
 ]

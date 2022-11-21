@@ -4,6 +4,7 @@ import { GetActiviitiesDB } from "../utils/getActivitiesDB";
 import { MultQuestions } from "./MultQuestions";
 import { Complete } from "./Complete";
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
+import { Calc } from './Calculo';
 
 function ModuleQuestions(){
     const activities = GetActiviitiesDB();
@@ -22,7 +23,6 @@ function ModuleQuestions(){
             )
         }
 
-
         else if(item.type.toUpperCase() === 'COMPLETE'){
             return (
                 <Complete 
@@ -30,6 +30,19 @@ function ModuleQuestions(){
                     questionId={item.id}
                     questionTitle={item?.title} 
                     questionImg={item?.img}
+                    answers={item?.answers}
+                    question={item?.question}
+                />
+            )
+        }
+        
+        else if(item.type.toUpperCase() === 'CALC'){
+            return (
+                <Calc 
+                    key={index}
+                    questionId={item.id}
+                    questionTitle={item?.title} 
+                    questionText={item?.text}
                     answers={item?.answers}
                     question={item?.question}
                 />

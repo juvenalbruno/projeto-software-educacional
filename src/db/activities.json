@@ -132,6 +132,40 @@
         "question": "f***ó"
     },
 
-
-    {}
+    {
+        "id": 9,
+        "module_id": 2,
+        "title": "Resolva o seguinte problema",
+        "text": "O senhor Thiago tem 400 pés de milho com 3 espigas cada pé. Se tudo ocorrer bem e ele colher todas as espigas de milho boas, quantas espigas ele terá?",
+        "type": "CALC",
+        "answers": "400,x,3,=,1200",
+        "question": "400,x,3,=,*"
+    },
+    {
+        "id": 10,
+        "module_id": 2,
+        "title": "Resolva o seguinte problema",
+        "text": "Dona Hildete vendeu 20 copos de mingau, 30 pedaços de bolo e 5 pastéis na ferinha do bairro hoje. Quantos itens dona Hildete vendeu hoje?",
+        "type": "CALC",
+        "answers": "20,+,30,+,5,=,55",
+        "question": "*,*,30,*,5,=,55"
+    },
+    {
+        "id": 11,
+        "module_id": 2,
+        "title": "Resolva o seguinte problema",
+        "text": "Numa fábrica produz 150 sapatos em 1 dia. Em uma semana quantos sapatos são produzidos pela empresa?",
+        "type": "CALC",
+        "answers": "(150,x,7),÷,1,=,1050",
+        "question": "(150,*,7),÷,*,=,*"
+    },
+    {
+        "id": 12,
+        "module_id": 2,
+        "title": "Resolva o seguinte problema",
+        "text": "Vitória recebeu seu salário de R$ 1000. Na manha seguinte ela pagou R$ 300 de mercado, pagou R$ 38 na conta de luz e R$ 62 na conta de água e R$ 300 de aluguel. Quanto Vitória ainda tem?",
+        "type": "CALC",
+        "answers": "1000,-,300,-,38,-,62,-,300,=,300",
+        "question": "1000,-,*,-,*,-,*,-,300,=,*"
+    }
 ]

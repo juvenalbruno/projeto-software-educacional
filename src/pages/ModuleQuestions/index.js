@@ -6,6 +6,7 @@ import { Complete } from "./Complete";
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 import { Calc } from './Calculo';
 import { NextModule } from './NextModule';
+import { MultQuestionsCalc } from './MultQuestionsCalc';
 
 function ModuleQuestions(){
     const activities = GetActiviitiesDB();
@@ -20,6 +21,18 @@ function ModuleQuestions(){
                     questionId={item.id}
                     questionTitle={item?.title} 
                     questionImg={item?.img}
+                    answers={item?.answers}
+                />
+            )
+        }
+
+        if(item.type.toUpperCase() === 'CALC_MULT'){
+            return (
+                <MultQuestionsCalc
+                    key={index}
+                    questionId={item.id}
+                    questionTitle={item?.title}
+                    questionText={item.text}
                     answers={item?.answers}
                 />
             )
@@ -68,7 +81,7 @@ function ModuleQuestions(){
                 <button 
                     className={pagination === 0 ? 'blocked' : ''}
                     disabled={pagination === 0} 
-                    onClick={() => Pagination(pagination - 1)}>
+                    onClick={() => moduleDafault ? setModuleDafault(false) : Pagination(pagination - 1)}>
                         <FiArrowLeft /> Anterior</button>
 
                 <button 

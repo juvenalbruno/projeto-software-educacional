@@ -64,6 +64,7 @@ function Complete({ questionId, questionTitle, questionImg, question, answers })
                             ? '3px solid #ff0000'
                             : '1px solid #000'
                     }
+                    isCorrect={arr[index] === '*' ? arrCorrect[index] === arrComplete[index] ? true : false : false}
                 />
             )}
         </div>

@@ -5,10 +5,12 @@ import { MultQuestions } from "./MultQuestions";
 import { Complete } from "./Complete";
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 import { Calc } from './Calculo';
+import { NextModule } from './NextModule';
 
 function ModuleQuestions(){
     const activities = GetActiviitiesDB();
     const [pagination, setPagination] = React.useState(0);
+    const [moduleDafault, setModuleDafault] = React.useState(false);
 
     function SelectTypeQuestion(item, index){
         if(item.type.toUpperCase() === 'MULT'){
@@ -51,8 +53,13 @@ function ModuleQuestions(){
     };
 
     function Pagination(value){
-        if(value < activities.length && value >= 0)
+        if(value < activities.length && value >= 0){
             setPagination(value);
+            setModuleDafault(false);
+        }
+
+        else if(value === activities.length)
+            setModuleDafault(true);
     }
     
     return(
@@ -65,13 +72,18 @@ function ModuleQuestions(){
                         <FiArrowLeft /> Anterior</button>
 
                 <button 
-                    className={pagination === activities.length - 1 ? 'blocked' : ''}
-                    disabled={pagination === activities.length - 1} 
+                    className={moduleDafault  ? 'blocked' : ''}
+                    disabled={moduleDafault} 
                     onClick={() => Pagination(pagination + 1)}>
                         Próximo <FiArrowRight /></button>
             </div>
 
-            { SelectTypeQuestion(activities[pagination], pagination) }
+            { moduleDafault 
+                ? <NextModule />
+                : SelectTypeQuestion(activities[pagination], pagination) 
+            }
+
+
         </Container>
     );
 }

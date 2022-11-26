@@ -38,5 +38,7 @@ export const Input = styled.input `
     height: 40px;
     text-align: center;
     font-size: 28px;
-    border: ${({ isCorrectComplete }) => isCorrectComplete };
+    border: ${({ isCorrectComplete, isCorrect }) => isCorrect 
+    ? '3px solid #0eff00' 
+    : isCorrectComplete };
 `;

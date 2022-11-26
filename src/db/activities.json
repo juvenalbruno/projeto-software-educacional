@@ -167,5 +167,92 @@
         "type": "CALC",
         "answers": "1000,-,300,-,38,-,62,-,300,=,300",
         "question": "1000,-,*,-,*,-,*,-,300,=,*"
+    },
+    {
+        "id": 13,
+        "module_id": 2,
+        "title": "Resolva o seguinte problema",
+        "text": "Juninho comprou um celular para jogar Free Fire, escondido no cartão de sua mãe, no valor de R$ 950,00, no qual dividiu em 10 prestações iguais. Sua mãe pagou até a 4º prestação. O pai de Juninho, para evitar confusão, resolveu pagar o resto das prestações. Quanto o pai de Juninho teve que pagar?",
+        "type": "CALC_MULT",
+        "answers": [
+            {
+                "id": 1,
+                "label": "R$ 500,00",
+                "answerIsCorrect": false
+            },
+            {
+                "id": 2,
+                "label": "R$ 450,00",
+                "answerIsCorrect": false
+            },
+            {
+                "id": 3,
+                "label": "R$ 570,00",
+                "answerIsCorrect": true
+            },
+            {
+                "id": 4,
+                "label": "R$ 900,00",
+                "answerIsCorrect": false
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "module_id": 2,
+        "title": "Resolva o seguinte problema",
+        "text": "Tiago pretende realizar uma viagem utilizando seu Chevette cujo consumo médio de combustível é de 10 Km/L. Sabendo que percorrerá 300 000 m, é correto afirmar que o volume de combustível a ser consumido será de:",
+        "type": "CALC_MULT",
+        "answers": [
+            {
+                "id": 1,
+                "label": "10 litros",
+                "answerIsCorrect": false
+            },
+            {
+                "id": 2,
+                "label": "12 litros",
+                "answerIsCorrect": false
+            },
+            {
+                "id": 3,
+                "label": "29 litros",
+                "answerIsCorrect": false
+            },
+            {
+                "id": 4,
+                "label": "30 litros",
+                "answerIsCorrect": true
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "module_id": 2,
+        "title": "Resolva o seguinte problema",
+        "text": "Uma empresa, sediada no polo industrial de Camaçari, tem 750 empregados e comprou marmitas individuais congeladas suficientes para o almoço deles durante 25 dias. Se essa empresa tivesse mais 500 empregados, a quantidade de marmitas adquiridas seria suficiente para quantos dias?",
+        "type": "CALC_MULT",
+        "answers": [
+            {
+                "id": 1,
+                "label": "20",
+                "answerIsCorrect": false
+            },
+            {
+                "id": 2,
+                "label": "15",
+                "answerIsCorrect": true
+            },
+            {
+                "id": 3,
+                "label": "11",
+                "answerIsCorrect": false
+            },
+            {
+                "id": 4,
+                "label": "17",
+                "answerIsCorrect": true
+            }
+        ]
     }
 ]
